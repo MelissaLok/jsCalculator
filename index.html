@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS_Calculator </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <p> My simple and bogan calculator~ </p> -->
+      <form name="calculator" class="calculator">
+          
+        <input autofocus type="text" name="text" class="value"> 
+            <span class="number reset" onclick="document.calculator.text.value=' '">C</span>
+            <span class="number" onclick="document.calculator.text.value+='/' ">/</span>
+            <span class="number" onclick="document.calculator.text.value+='7' ">7</span>
+            <span class="number" onclick="document.calculator.text.value+='8' ">8</span>
+            <span class="number" onclick="document.calculator.text.value+='9' ">9</span>
+            <span class="number" onclick="document.calculator.text.value+='*' ">*</span>
+            <span class="number" onclick="document.calculator.text.value+='4' ">4</span>
+            <span class="number" onclick="document.calculator.text.value+='5' ">5</span>
+            <span class="number" onclick="document.calculator.text.value+='6' ">6</span>
+            <span class="number" onclick="document.calculator.text.value+='-' ">-</span>
+            <span class="number" onclick="document.calculator.text.value+='1' ">1</span>
+            <span class="number" onclick="document.calculator.text.value+='2' ">2</span>
+            <span class="number" onclick="document.calculator.text.value+='3' ">3</span>
+            <span class="number add" onclick="document.calculator.text.value+='+' ">+</span>
+            <span class="number" onclick="document.calculator.text.value+='0' ">0</span>
+            <span class="number" onclick="document.calculator.text.value+='.' ">.</span>
+            <span class="number" onclick="document.calculator.text.value+='%' ">%</span>
+            <span class="number result" onclick="document.calculator.text.value=eval(calculator.text.value)">=</span>
+          
+            <script>
+                document.getElementsByClassName('calculator')[0].onsubmit = function(evt){
+                    document.getElementsByClassName('result')[0].onclick();
+                    evt.preventDefault();
+                }
+              </script>
+
+      </form>
+  </body>
+</html>
